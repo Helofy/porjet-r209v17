@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+{% load static %}
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{%static 'football/index.css'%}">
+<title>index</title>
+</head>
+<body>
+<h1>Bienvenu</h1>
+<a href="/football/ajout.html"> Ajouter un club</a>
+{% for l in liste %}
+    <li> {{l}} <a href="/football/affiche/{{l.id}}">affiche</a> <a href="/football/update/{{l.id}}">update</a> <a href="/football/delete/{{l.id}}">delete</a></li>
+
+{%endfor%}
+</body>
+
+</html>
