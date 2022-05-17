@@ -30,7 +30,7 @@ def traitement(request):
     cform = ClubForm(request.POST)
     if cform.is_valid():
         club= cform.save()
-        return HttpResponseRedirect("/football/")
+        return HttpResponseRedirrect("/football/")
     else:
         return render(request,"football/ajout.html",{"form": cform})
 
